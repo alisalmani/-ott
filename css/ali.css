@@ -1,0 +1,30 @@
+.mybox1-a {
+	font-size: 1rem;
+	line-height: 1.25;
+	background: #fff;
+	color: #4b4b4b;
+	margin-bottom: 1.5rem;
+	border-radius: .375rem;
+	
+	font-weight: 400;
+}
+.mybox1-a .card-body .btn-group .btn
+{
+    color:#000;
+}
+
+.mybox1-a.active
+{
+    box-shadow: 0 2px 12px 0 #dfe3eb;
+}
+.lamp1
+{
+    color:#808080 !important;
+}
+.lamp1.active{
+    color:#15eae4;
+    background:linear-gradient(90deg,#fc0,#ffa100);
+}
+.lamp1.active .span{
+    color:black;
+}
