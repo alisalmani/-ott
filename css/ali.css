@@ -348,3 +348,15 @@
 .player .right .info .heart.hearted .fa-heart-o:before {
   content: "";
 }
+.player .sound input{
+    width:70px;
+
+}
+.player .sound
+{
+padding: 3px;
+}
+.player .sound i{
+    font-size:12px;
+    position:absolute;
+}
