@@ -58,6 +58,10 @@
 {
     border: 2px solid  #fff ;
 }
+.dark .player .right .info .more span
+{
+    border:2px solid #fff;
+}
 .player {
     width:100%;
     min-height:320px;
@@ -327,7 +331,7 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid #000;
   margin: 2.5px;
   transition: 0.15s;
 }
