@@ -8,10 +8,16 @@
 	
 	font-weight: 400;
 }
+.dark .mybox1-a
+{
+    color:#fff;
+    background:#3D3780
+}
 .mybox1-a .card-body .btn-group .btn
 {
     color:#000;
 }
+
 .card
 {
     min-width:120px;
@@ -22,31 +28,48 @@
 }
 .lamp1
 {
-    color:#808080 !important;
+    color:#808080 ;
 }
+
 .lamp1.active{
-    color:#15eae4;
+    color:#000;
     background:linear-gradient(90deg,#fc0,#ffa100);
 }
 .lamp1.active .span{
     color:black;
 }
 
+.dark .lamp1.active
+{
+    color:#000;
+}
 
+.dark .player
+{
+    background:#3D3780;
+    
+}
+.dark .player .right
+{
+    color:#fff;
 
-
+}
+.dark .player .right .buttons .play
+{
+    border: 2px solid  #fff ;
+}
 .player {
     width:100%;
-  height: 640px;
+    min-height:320px;
+  /*height: 40px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: #000;
   overflow: hidden;
   position: relative;
-  background: red;
-  margin: 10px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.35);
+  background: #fff;
+  
 }
 .player .left {
   background: #343838;
@@ -105,6 +128,7 @@
   right: 20px;
   top: 9px;
   cursor: pointer;
+  color:#fff;
 }
 .player .right {
   width: 100%;
@@ -113,7 +137,6 @@
   padding: 20px;
   top: 0;
   left: 0;
-  background: linear-gradient(-45deg, #008c9e, #00b2c9);
   transform: translate(0%, 0);
   transition: 0.35s ease-in-out;
   display: flex;
@@ -151,7 +174,12 @@
   max-widtH: 100%;
 }
 .player .right .album {
-  width: 320px;
+ height:100px;
+ width:70%;
+ margin-right:15%;
+ margin-left:15%;
+ overflow:hidden;
+ margin-top:20px;
 }
 .player .right .song-meta-data {
   text-align: center;
@@ -164,8 +192,7 @@
   margin: 0;
 }
 .player .right .buttons {
-  padding: 40px 0;
-  padding-bottom: 20px;
+ 
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -185,7 +212,7 @@
   heighT: 50px;
   display: block;
   border-radius: 50px;
-  border: 2px solid white;
+  border: 2px solid #000;
   text-align: center;
   display: flex;
   justify-content: center;
