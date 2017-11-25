@@ -9252,9 +9252,15 @@ app-root {
     width: 220px;
     margin-left: 0; }
   .sidebar-mobile-show .main {
-    margin-right: -220px !important;
-    margin-left: 220px !important; } }
-
+    margin-right: 200px !important;
+    margin-left: 20px !important; } }
+.aside-menu-fixed.aside-menu-hidden .main, .aside-menu-fixed.aside-menu-hidden .app-footer
+{
+    margin-right:50px;
+}
+.sidebar-fixed .main, .sidebar-fixed .app-footer{
+    margin-right:50px;
+}
 hr.transparent {
   border-top: 1px solid transparent; }
 
