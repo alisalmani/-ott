@@ -350,6 +350,7 @@
 }
 .player .sound input{
     width:70px;
+    direction:ltr;
 
 }
 .player .sound

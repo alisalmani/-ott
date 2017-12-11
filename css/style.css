@@ -9256,10 +9256,11 @@ app-root {
     margin-left: 20px !important; } }
 .aside-menu-fixed.aside-menu-hidden .main, .aside-menu-fixed.aside-menu-hidden .app-footer
 {
-    margin-right:50px;
+    /*margin-left:50px;*/
 }
 .sidebar-fixed .main, .sidebar-fixed .app-footer{
-    margin-right:50px;
+    margin-right:200px;
+
 }
 hr.transparent {
   border-top: 1px solid transparent; }
