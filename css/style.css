@@ -9089,6 +9089,7 @@ app-root {
   position: fixed;
   z-index: 1019;
   width: 200px;
+  right:0px;
   height: calc(100vh - 55px); }
 
 .sidebar-fixed .main, .sidebar-fixed .app-footer {

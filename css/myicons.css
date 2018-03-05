@@ -1,0 +1,29 @@
+/*icon list class*/
+/* 01*/
+.myicon{
+    width:100px;
+    height:100px;
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+.icon-box
+{
+    margin:8px;
+    padding:5px;
+}
+.open-window01
+{
+background-image:url(../img/icon/01/001-windows.png);
+
+}
+.dark .open-window01
+{
+background-image:url(../img/icon/03/001-open-windows.png);
+
+}
+.calender01
+{
+background-image:url(../img/icon/01/001-windows.png);
+
+}
+/* 01*/

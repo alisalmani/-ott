@@ -1,0 +1,876 @@
+﻿<!--
+ * CoreUI - Open Source Bootstrap Admin Template
+ * @version v1.0.4
+ * @link http://coreui.io
+ * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+ * @license MIT
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>سایت ما</title>
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!--<link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">-->
+    <!-- Main styles for this application -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/ali.css" rel="stylesheet" type="text/css">
+    <link href="http://cdn.font-store.ir/yekan.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/myicons.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- Styles required by this views -->
+    <style>
+        .span-menu-item {
+            position: relative;
+            top: -11px;
+            right: 8px;
+        }
+
+        .my-lable {
+            margin-left: 15px;
+            margin-right: 15px;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .my-rtl {
+            direction: rtl;
+            text-align: right !important;
+        }
+
+            .my-rtl .aside-menu-fixed.aside-menu-hidden .main, .my-rtl .aside-menu-fixed.aside-menu-hidden .app-footer {
+                margin-right: 200px;
+                margin-left: 20px;
+            }
+
+            .my-rtl .ml-auto {
+                margin-right: auto !important;
+                margin-left: 20px !important;
+            }
+
+            .my-rtl .nav {
+                padding-right: 0px;
+            }
+
+        @media (min-width: 1200px) {
+            .my-rtl .main {
+                margin-right: 200px !important;
+                margin-left: 10px;
+            }
+        }
+
+        .sidebar-minimized .main {
+            margin-right: 70px !important;
+        }
+
+        .aside-menu-fixed .aside-menu {
+            left: 0;
+            right: auto;
+        }
+
+        .aside-menu-fixed .aside-menu {
+            left: 0;
+            right: auto;
+        }
+
+        .aside-menu-hidden .aside-menu {
+            margin-left: -250px;
+        }
+
+        .my-rtl .sidebar-minimized .sidebar .nav-link i, .sidebar-minimized .sidebar .navbar .dropdown-toggle i, my-rtl .navbar .sidebar-minimized .sidebar .dropdown-toggle i {
+            float: left !important;
+        }
+
+        .my-rtl .sidebar-minimized .sidebar .nav-link, .sidebar-minimized .sidebar .navbar .dropdown-toggle, .navbar .sidebar-minimized .sidebar .dropdown-toggle {
+            padding-right: 0;
+        }
+
+        .sidebar-hidden .main {
+            margin-right: 20px !important;
+        }
+
+        .my-rtl .sidebar-fixed .main {
+            margin-left: 10px;
+            margin-right: 200px;
+        }
+
+        .sidebar-minimized .app-body .nav-link {
+            text-align: right;
+            float: left;
+            direction: ltr;
+        }
+
+        .my-rtl .sidebar .nav-link {
+            text-align: right;
+        }
+
+        .switch-primary > .switch-input:checked ~ .switch-label {
+            background: #b0b5b7 !important;
+            border-color: #9ca0a2;
+        }
+
+        .dark .navbar-nav .nav-link, .navbar-nav .navbar .dropdown-toggle, .navbar .navbar-nav .dropdown-toggle i {
+            color: #829CD3;
+        }
+
+        .dark .sidebar .nav-link:hover i, .sidebar .navbar .dropdown-toggle:hover i, .navbar .sidebar .dropdown-toggle:hover i {
+            color: #fff;
+        }
+
+        .switch.switch-3d .switch-handle {
+            background-color: #40dc7e;
+            box-shadow: 0 0 .25rem 0 hsla(212,9%,67%,.4);
+        }
+
+        .header-fixed .app-body {
+            height: calc(100vh - 7.75rem - 2rem) !important;
+            margin-top: 90px;
+        }
+
+        body {
+            background: #EBEFF5;
+        }
+
+            body div p, span, label, a, li {
+                font-family: 'yekan';
+            }
+
+        .my-brand {
+            font-family: 'yekan','B Yekan';
+            font-size: larger;
+            font-weight: 600;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .dark {
+        }
+
+        .dark {
+            background: #2E286A;
+        }
+
+            .dark .sidebar .nav-link i, .sidebar .navbar .dropdown-toggle i, .navbar .sidebar .dropdown-toggle i {
+                color: #5A78DC;
+            }
+
+            .dark .sidebar .nav-link.active i, .sidebar .navbar .active.dropdown-toggle i, .navbar .sidebar .active.dropdown-toggle i {
+                color: #fff;
+            }
+
+            .dark .switch-primary > .switch-input:checked ~ .switch-label {
+                background-color: #2f296b !important;
+                border-color: #2F296B;
+            }
+
+            .dark .switch.switch-3d .switch-handle {
+                background-image: linear-gradient(90deg,#ad59ff,#7659ff);
+                box-shadow: 0 0 .25rem 0 hsla(212,9%,67%,.4);
+            }
+
+            .dark .app-header {
+                background: #3D3780;
+                color: #FFFFFF;
+            }
+
+            .dark .sidebar .nav-link.active, .sidebar .navbar .active.dropdown-toggle, .navbar .sidebar .active.dropdown-toggle {
+                color: #fff;
+                background: #3D3780;
+            }
+
+            .dark .sidebar .nav-link:hover, .sidebar .navbar .dropdown-toggle:hover, .navbar .sidebar .dropdown-toggle:hover {
+                color: #fff;
+                background: #20a8d8;
+            }
+
+            .dark .sidebar {
+                color: #fff;
+                background: #3D3780;
+            }
+
+                .dark .sidebar .nav-link, .sidebar .navbar .dropdown-toggle, .navbar .sidebar .dropdown-toggle {
+                    color: #5A78DC;
+                }
+
+                .dark .sidebar .nav-dropdown.open {
+                    background: #2F296B;
+                }
+
+                    .dark .sidebar .nav-dropdown.open .nav-link, .sidebar .nav-dropdown.open .navbar .dropdown-toggle, .navbar .sidebar .nav-dropdown.open .dropdown-toggle {
+                        color: #fff;
+                        border-left: 0 !important;
+                    }
+
+        .dropdown-item {
+            text-align: right;
+        }
+
+        .sidebar-hidden .app-footer {
+            margin-right: 20px !important;
+        }
+
+        .sidebar-minimized .app-footer {
+            margin-right: 61px !important;
+        }
+
+        .mic-hover:hover {
+            color: #f86c6b;
+        }
+    </style>
+</head>
+<!-- BODY options, add following classes to body to change options
+
+// Header options
+1. '.header-fixed'					- Fixed Header
+
+// Brand options
+1. '.brand-minimized'       - Minimized brand (Only symbol)
+
+// Sidebar options
+1. '.sidebar-fixed'					- Fixed Sidebar
+2. '.sidebar-hidden'				- Hidden Sidebar
+3. '.sidebar-off-canvas'		- Off Canvas Sidebar
+4. '.sidebar-minimized'			- Minimized Sidebar (Only icons)
+5. '.sidebar-compact'			  - Compact Sidebar
+
+// Aside options
+1. '.aside-menu-fixed'			- Fixed Aside Menu
+2. '.aside-menu-hidden'			- Hidden Aside Menu
+3. '.aside-menu-off-canvas'	- Off Canvas Aside Menu
+
+// Breadcrumb options
+1. '.breadcrumb-fixed'			- Fixed Breadcrumb
+
+// Footer options
+1. '.footer-fixed'					- Fixed footer
+
+-->
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden my-rtl">
+    <header class="app-header navbar">
+        <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
+            <span class="fa fa-bars fa-2x" aria-hidden="true"></span>
+        </button>
+        <div>
+            <a class="my-brand" href="#">سلام</a>
+            <label class="my-lable">تاریک</label>
+            <label class="switch switch-3d switch-primary switch-lg">
+                <input class="switch-input" id="theme" onchange="theme_func()" type="checkbox">
+                <span class="switch-label"></span>
+                <span class="switch-handle my-switch-handeler"></span>
+            </label>
+            <label class="my-lable">روشن</label>
+
+        </div>
+        <!--<ul class="nav navbar-nav d-md-down-none">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Users</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>-->
+
+        <ul class="nav navbar-nav ml-auto ">
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+            </li>
+            <!--<li class="nav-item d-md-down-none">
+                <a class="nav-link" href="#"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+            </li>-->
+            <!--<li class="nav-item d-md-down-none">
+                <a class="nav-link" href="#"><i class="fa fa-bell-o fa-2x" aria-hidden="true"></i><span class="badge badge-pill badge-danger">5</span></a>
+            </li>-->
+
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="#"><i class="fa fa-microphone fa-2x mic-hover" aria-hidden="true"></i></a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                    admin
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>اطلاعات من</strong>
+                    </div>
+
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i><span class=""> پروفایل</span></a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i><span class=""> تنظیمات</span></a>
+
+                    <div class="divider"></div>
+                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i><span class=""> خروج</span></a>
+                </div>
+            </li>
+        </ul>
+
+        <button class="navbar-toggler aside-menu-toggler" type="button">
+            <span class="fa fa-bars fa-2x" aria-hidden="true"></span>
+        </button>
+    </header>
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fa fa-home fa-4x"></i> <span class="span-menu-item">صفحه اصلی</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="fa fa-sitemap fa-3x" aria-hidden="true"></i><span class="span-menu-item"> کنترلر ها/نقشه </span></a>
+                    </li>
+
+
+                    <!--<li class="nav-item nav-dropdown">
+                      <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                      <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <i class=" fa fa-plus"></i>
+                          <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> Buttons</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-modals.html"><i class="icon-puzzle"></i> Modals</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="components-tabs.html"><i class="icon-puzzle"></i> Tabs</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                      <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Icons</a>
+                      <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                          <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome <span class="badge badge-secondary">4.7</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
+                        </li>
+                      </ul
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i><span class="span-menu-item"> گزارشات </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="fa fa-heartbeat fa-3x" aria-hidden="true"></i><span class="span-menu-item"> وضعیت سیستم</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="fa fa-tasks fa-3x" aria-hidden="true"></i><span class="span-menu-item"> کارها/ وظیفه ها</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="fa fa-cogs fa-3x" aria-hidden="true"></i><span class="span-menu-item"> تنظیمات</span></a>
+                    </li>
+
+
+                    <li class="divider"></li>
+                    <!--<li class="nav-title">
+                      Extras
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                      <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Pages</a>
+                      <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item mt-auto">
+                      <a class="nav-link nav-link-success" href="http://coreui.io/" target="_top"><i class="icon-cloud-download"></i> Download CoreUI</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-link-danger" href="http://coreui.io/pro/" target="_top"><i class="icon-layers"></i> Try CoreUI <strong>PRO</strong></a>
+                    </li>-->
+                    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Main content -->
+        <main class="main">
+
+
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <!--کد ها باید اینجا باشد-->
+                    <div class="row">
+                        <div class="col-md-6 mybox1-a">
+                            <h1>افزودن text input جدید</h1>
+                            <div class="input-group mb-3">
+                                <input class="form-control" placeholder="عنوان" type="text">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input class="form-control" placeholder="پیام ارسالی" type="text">
+                            </div>
+                           
+                            <div class="input-group mb-3">
+                                <input class="form-control"  placeholder="متن" type="text">
+                            </div>
+                         
+                          
+                            <div class="input-group mb-3">
+                                <div class="col-md-8">
+                                    <span>ماندگاری</span>
+                                    <input id="Checkbox1" type="checkbox" title="ماندگاری" />
+                                </div>
+                                
+                                <!--<div class="col-md-4">
+                                    <span>قابلیت انتشار</span>
+                                    <input id="Checkbox2" type="checkbox" title="قابلیت انتشار" />
+                                </div>-->
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="col-md-2">QOS :</span>
+                                <select id="Select1" class="col-md-9">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="col-md-2">مکان :</span>
+                                <select id="Select2" class="col-md-9">
+                                    <option>اتاق 1</option>
+                                    <option>اشپزخانه</option>
+                                    <option>هال</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="col-md-2">طبقه بندی :</span>
+                                <select id="Select3" class="col-md-9">
+                                    <option>روشنایی</option>
+                                    <option>صوت</option>
+                                    <option>درب و پنجره</option>
+                                    <option>پرده </option>
+                                    <option>سرمایش</option>
+                                    <option>گرمایش</option>
+                                    <option>سایر</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input class="form-control" id="IconTextBox" placeholder="تصویر" type="text">
+                            </div>
+                             
+                            <div class="input-group mb-3">
+                                <button type="submit" class="btn btn-sm btn-success col-lg-2"><i class="fa fa-dot-circle-o"></i> ثبت</button>
+                              <span class="col-lg-8"></span>
+                                  <button type="reset" class="btn btn-sm btn-danger col-lg-2"><i class="fa fa-ban"></i> بازگشت</button>
+                            </div>
+                                </div>
+                          
+                            <br/>
+                      
+                        </div>
+               
+                    </div>
+
+
+
+                    <!--MODALS-->
+                    <div class="modal fade" id="myModalIcon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">انتخاب تصویر</h4>
+                                    <select id="Select_icon_theme" class="col-md-6">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+
+                                    </select>
+                                </div>
+                                <div class="modal-body row">
+                                    
+                                   <div class="icon-box col-6 col-sm-4 col-md-3 col-lg-2">
+                                       <a onclick="select_icon()">
+                                       <div class="open-window01 myicon"></div>
+                                           </a>
+                                   </div>
+                                    <div class="icon-box col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <a onclick="select_icon()">
+                                            <div class="open-window01 myicon"></div>
+                                        </a>
+                                    </div>
+                                    <div class="icon-box col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <a onclick="select_icon()">
+                                            <div class="open-window01 myicon"></div>
+                                        </a>
+                                    </div>
+                                    <div class="icon-box col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <a onclick="select_icon()">
+                                            <div class="open-window01 myicon"></div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <span class="error"></span>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+         
+            <!-- /.conainer-fluid -->
+        </main>
+        <aside class="aside-menu">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab"><i class="icon-list"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><i class="icon-speech"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#settings" role="tab"><i class="icon-settings"></i></a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="timeline" role="tabpanel">
+                    <div class="callout m-0 py-2 text-muted text-center bg-light text-uppercase">
+                        <small><b>Today</b></small>
+                    </div>
+                    <hr class="transparent mx-3 my-0">
+                    <div class="callout callout-warning m-0 py-3">
+                        <div class="avatar float-right">
+                            <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        </div>
+                        <div>
+                            Meeting with
+                            <strong>Lucas</strong>
+                        </div>
+                        <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 1 - 3pm</small>
+                        <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA </small>
+                    </div>
+                    <hr class="mx-3 my-0">
+                    <div class="callout callout-info m-0 py-3">
+                        <div class="avatar float-right">
+                            <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        </div>
+                        <div>
+                            Skype with
+                            <strong>Megan</strong>
+                        </div>
+                        <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 4 - 5pm</small>
+                        <small class="text-muted"><i class="icon-social-skype"></i>&nbsp; On-line </small>
+                    </div>
+                    <hr class="transparent mx-3 my-0">
+                    <div class="callout m-0 py-2 text-muted text-center bg-light text-uppercase">
+                        <small><b>Tomorrow</b></small>
+                    </div>
+                    <hr class="transparent mx-3 my-0">
+                    <div class="callout callout-danger m-0 py-3">
+                        <div>
+                            New UI Project -
+                            <strong>deadline</strong>
+                        </div>
+                        <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 10 - 11pm</small>
+                        <small class="text-muted"><i class="icon-home"></i>&nbsp; creativeLabs HQ </small>
+                        <div class="avatars-stack mt-2">
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mx-3 my-0">
+                    <div class="callout callout-success m-0 py-3">
+                        <div>
+                            <strong>#10 Startups.Garden</strong> Meetup
+                        </div>
+                        <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 1 - 3pm</small>
+                        <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA </small>
+                    </div>
+                    <hr class="mx-3 my-0">
+                    <div class="callout callout-primary m-0 py-3">
+                        <div>
+                            <strong>Team meeting</strong>
+                        </div>
+                        <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 4 - 6pm</small>
+                        <small class="text-muted"><i class="icon-home"></i>&nbsp; creativeLabs HQ </small>
+                        <div class="avatars-stack mt-2">
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                            <div class="avatar avatar-xs">
+                                <img src="img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mx-3 my-0">
+                </div>
+                <div class="tab-pane p-3" id="messages" role="tabpanel">
+                    <div class="message">
+                        <div class="py-3 pb-5 mr-3 float-left">
+                            <div class="avatar">
+                                <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <span class="avatar-status badge-success"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lukasz Holeczek</small>
+                            <small class="text-muted float-right mt-1">1:52 PM</small>
+                        </div>
+                        <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                        <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                    </div>
+                    <hr>
+                    <div class="message">
+                        <div class="py-3 pb-5 mr-3 float-left">
+                            <div class="avatar">
+                                <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <span class="avatar-status badge-success"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lukasz Holeczek</small>
+                            <small class="text-muted float-right mt-1">1:52 PM</small>
+                        </div>
+                        <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                        <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                    </div>
+                    <hr>
+                    <div class="message">
+                        <div class="py-3 pb-5 mr-3 float-left">
+                            <div class="avatar">
+                                <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <span class="avatar-status badge-success"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lukasz Holeczek</small>
+                            <small class="text-muted float-right mt-1">1:52 PM</small>
+                        </div>
+                        <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                        <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                    </div>
+                    <hr>
+                    <div class="message">
+                        <div class="py-3 pb-5 mr-3 float-left">
+                            <div class="avatar">
+                                <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <span class="avatar-status badge-success"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lukasz Holeczek</small>
+                            <small class="text-muted float-right mt-1">1:52 PM</small>
+                        </div>
+                        <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                        <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                    </div>
+                    <hr>
+                    <div class="message">
+                        <div class="py-3 pb-5 mr-3 float-left">
+                            <div class="avatar">
+                                <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <span class="avatar-status badge-success"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lukasz Holeczek</small>
+                            <small class="text-muted float-right mt-1">1:52 PM</small>
+                        </div>
+                        <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                        <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                    </div>
+                </div>
+                <div class="tab-pane p-3" id="settings" role="tabpanel">
+                    <h6>Settings</h6>
+                    <div class="aside-options">
+                        <div class="clearfix mt-4">
+                            <small><b>Option 1</b></small>
+                            <label class="switch switch-text switch-pill switch-success switch-sm float-right">
+                                <input type="checkbox" class="switch-input" checked="">
+                                <span class="switch-label" data-on="On" data-off="Off"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                        </div>
+                    </div>
+                    <div class="aside-options">
+                        <div class="clearfix mt-3">
+                            <small><b>Option 2</b></small>
+                            <label class="switch switch-text switch-pill switch-success switch-sm float-right">
+                                <input type="checkbox" class="switch-input">
+                                <span class="switch-label" data-on="On" data-off="Off"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                        </div>
+                    </div>
+                    <div class="aside-options">
+                        <div class="clearfix mt-3">
+                            <small><b>Option 3</b></small>
+                            <label class="switch switch-text switch-pill switch-success switch-sm float-right">
+                                <input type="checkbox" class="switch-input">
+                                <span class="switch-label" data-on="On" data-off="Off"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="aside-options">
+                        <div class="clearfix mt-3">
+                            <small><b>Option 4</b></small>
+                            <label class="switch switch-text switch-pill switch-success switch-sm float-right">
+                                <input type="checkbox" class="switch-input" checked="">
+                                <span class="switch-label" data-on="On" data-off="Off"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>System Utilization</h6>
+                    <div class="text-uppercase mb-1 mt-4">
+                        <small><b>CPU Usage</b></small>
+                    </div>
+                    <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small class="text-muted">348 Processes. 1/4 Cores.</small>
+                    <div class="text-uppercase mb-1 mt-2">
+                        <small><b>Memory Usage</b></small>
+                    </div>
+                    <div class="progress progress-xs">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small class="text-muted">11444GB/16384MB</small>
+                    <div class="text-uppercase mb-1 mt-2">
+                        <small><b>SSD 1 Usage</b></small>
+                    </div>
+                    <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small class="text-muted">243GB/256GB</small>
+                    <div class="text-uppercase mb-1 mt-2">
+                        <small><b>SSD 2 Usage</b></small>
+                    </div>
+                    <div class="progress progress-xs">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small class="text-muted">25GB/256GB</small>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <audio id="player"></audio>
+    <footer class="app-footer">
+        <span><a href="http://coreui.io">CoreUI</a> © 2017 creativeLabs.</span>
+        <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
+    </footer>
+    <!-- Bootstrap and necessary plugins -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/js/pace.min.js"></script>
+    <script src="vendors/js/gauge.min.js"></script>
+    <script src="vendors/js/toastr.min.js"></script>
+
+    <!-- Plugins and scripts required by all views -->
+    <script src="js/Chart.min.js"></script>
+    <!-- CoreUI main scripts -->
+    <script src="js/app.js"></script>
+    <!-- <script src="js/ali.js"></script> -->
+    <script src="js/player.js"></script>
+
+    <!-- Plugins and scripts required by this views -->
+    <!-- Custom scripts required by this view -->
+    <script src="js/views/main.js"></script>
+    <script src="js/jquery.minicolors.js"></script>
+
+    
+
+    <script>
+        $('#IconTextBox').focus(function () {
+            //open bootsrap modal
+            $('#myModalIcon').modal({
+                show: true
+            });
+        });
+
+      
+
+  
+    </script>
+</body>
+</html>
